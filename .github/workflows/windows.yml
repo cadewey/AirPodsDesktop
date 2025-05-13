@@ -105,7 +105,7 @@ jobs:
           move AirPodsDesktop-*-win32 AirPodsDesktop-${{ github.sha }}-win32
 
       - name: Upload artifact - Installer
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: env.UPLOAD_ARTIFACT == 'true'
         with:
           name: AirPodsDesktop-${{ github.sha }}-Installer
@@ -113,7 +113,7 @@ jobs:
           retention-days: 90
 
       - name: Upload artifact - Portable
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: env.UPLOAD_ARTIFACT == 'true'
         with:
           name: AirPodsDesktop-${{ github.sha }}-Portable
